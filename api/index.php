@@ -1,0 +1,915 @@
+<?php
+$tempoPromocao = "07:41";
+$precoAntigo1 = "199,90";
+$precoNovo1   = "159";
+$precoCentavo1 = ",90";
+
+$precoAntigo2 = "299,80";
+$precoNovo2   = "199";
+$precoCentavo2 = ",90";
+
+$precoAntigo3 = "257,70";
+$precoNovo3   = "189";
+$precoCentavo3 = ",90";
+
+$linkAfiliado1 = "https://app.hyppe.com.br/venda-multiplos?produto=NDQ%3D&afiliado=NDc3Mw%3D%3D&oferta=MTY5Mg%3D%3D";
+$linkAfiliado2 = "https://app.hyppe.com.br/venda-multiplos?produto=NDQ%3D&afiliado=NDc3Mw%3D%3D&oferta=MTA0OQ%3D%3D";
+$linkAfiliado3 = "https://app.hyppe.com.br/venda-multiplos?produto=NDQ%3D&afiliado=NDc3Mw%3D%3D&oferta=MTY5Mw%3D%3D";
+
+$appName = "Óculos Inteligente Adaptável";
+?>
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Cansado de vista embaçada, olhos ardendo e dor de cabeça? Conheça o <?= $appName ?>, que se ajusta automaticamente à sua visão.">
+    <title><?= $appName ?> - Promoção Exclusiva</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#2563eb',
+                            foreground: '#ffffff'
+                        },
+                        secondary: {
+                            DEFAULT: '#eab308',
+                            foreground: '#1e3a8a'
+                        },
+                        warning: {
+                            DEFAULT: '#facc15',
+                            foreground: '#000000'
+                        },
+                        success: {
+                            DEFAULT: '#22c55e'
+                        },
+                        foreground: '#1e293b',
+                        'muted-foreground': '#64748b',
+                        muted: '#f8fafc',
+                        card: '#ffffff',
+                        border: '#e2e8f0',
+                        background: '#ffffff',
+                        'blue-deep': '#0f172a'
+                    },
+                    backgroundImage: {
+                        'blue-gradient': 'linear-gradient(to bottom, #083081 0%, #083081 70%, #0d3fa3 100%)',
+                        'cta-gradient': 'linear-gradient(to right, #dc2626, #dc2626)'
+                    },
+                    boxShadow: {
+                        'strong': '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
+                        'medium': '0 10px 15px -3px rgba(0, 0, 0, 0.1)',
+                        'cta': '0 4px 14px 0 rgba(251, 191, 36, 0.39)'
+                    },
+                    animation: {
+                        'pulse-soft': 'scale-pulse 2s ease-in-out infinite',
+                        'float': 'float 3s ease-in-out infinite',
+                        'shadow-pulse': 'shadow-pulse 2s infinite'
+                    },
+                    keyframes: {
+                        'scale-pulse': {
+                            '0%, 100%': {
+                                transform: 'scale(1)'
+                            },
+                            '50%': {
+                                transform: 'scale(1.05)'
+                            }
+                        },
+                        pulse: {
+                            '0%, 100%': {
+                                transform: 'scale(1)'
+                            },
+                            '50%': {
+                                transform: 'scale(1.05)'
+                            }
+                        },
+                        'shadow-pulse': {
+                            '0%': {
+                                boxShadow: '0 0 0 0 rgba(220, 38, 38, 0.7)'
+                            },
+                            '70%': {
+                                boxShadow: '0 0 0 15px rgba(220, 38, 38, 0)'
+                            },
+                            '100%': {
+                                boxShadow: '0 0 0 0 rgba(220, 38, 38, 0)'
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .section-padding { @apply py-16 md:py-24; }
+            .btn-cta { @apply bg-cta-gradient text-white font-black py-4 px-8 rounded-full shadow-cta hover:scale-105 transition-transform duration-300; }
+        }
+        @keyframes float-slow {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-float {
+  animation: float-slow 6s ease-in-out infinite;
+}
+    </style>
+</head>
+
+<body class="bg-background text-foreground antialiased overflow-x-hidden">
+    <div id="root">
+        <div class="fixed top-0 left-0 right-0 z-50 bg-red-600 text-white shadow-md">
+            <div class="container mx-auto px-4 py-2 flex flex-col sm:flex-row items-center justify-center gap-2 text-center">
+                <div class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-yellow-400 animate-pulse">
+                        <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"></path>
+                        <path d="M12 9v4"></path>
+                        <path d="M12 17h.01"></path>
+                    </svg>
+                    <span id="alert-text"
+                        class="font-bold text-sm sm:text-base text-yellow-400">
+                        ⚠️ ÚLTIMAS UNIDADES!
+                    </span>
+                    <script>
+                        const textos = [
+                            "⚠️ ÚLTIMAS UNIDADES!",
+                            "⚠️ RESTAM POUCAS UNIDADES!"
+                        ];
+
+                        const el = document.getElementById("alert-text");
+                        const textoEscolhido = textos[Math.floor(Math.random() * textos.length)];
+
+                        el.textContent = textoEscolhido;
+                    </script>
+                </div>
+                <div class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="w-4 h-4 animate-pulse">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    <span class="text-sm">Promoção encerra em</span>
+                    <span id="timer" class="font-mono font-bold px-2 py-0.5 rounded bg-blue-900 text-white">
+                        15:00
+                    </span>
+                    <script>
+                        let time = 15 * 60;
+                        const timerEl = document.getElementById('timer');
+
+                        function updateTimer() {
+                            const minutes = String(Math.floor(time / 60)).padStart(2, '0');
+                            const seconds = String(time % 60).padStart(2, '0');
+                            timerEl.textContent = `${minutes}:${seconds}`;
+
+                            if (time > 0) {
+                                time--;
+                            }
+                        }
+                        updateTimer();
+                        setInterval(updateTimer, 1000);
+                    </script>
+                    <span class="text-sm">minutos</span>
+                </div>
+            </div>
+        </div>
+        <main class="overflow-hidden mt-[56px] sm:mt-[20px]">
+            <section class="bg-blue-gradient pt-16 pb-12 md:pt-20 md:pb-16 text-primary-foreground">
+                <div class="container mx-auto px-4">
+                    <div class="text-center mb-6">
+                        <span
+                            class="inline-flex items-center gap-2 bg-[#facc15] text-blue-800 text-sm font-bold px-6 py-3 rounded-full shadow-[0_0_30px_rgba(250,204,21,0.8)]
+         animate-[scale-pulse_2s_ease-in-out_infinite]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                                <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path>
+                                <path d="M15 18H9"></path>
+                                <path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path>
+                                <circle cx="17" cy="18" r="2"></circle>
+                                <circle cx="7" cy="18" r="2"></circle>
+                            </svg>
+                            ENTREGA GRÁTIS EM 24 HORAS — PAGAMENTO SOMENTE NA ENTREGA
+                        </span>
+                    </div>
+                    <div class="flex justify-center mb-8">
+                        <div class="w-full max-w-sm aspect-[9/16] rounded-xl overflow-hidden shadow-2xl">
+                            <iframe src="https://www.youtube.com/embed/BHZRyoTox5c?autoplay=1&mute=0&loop=1&playlist=BHZRyoTox5c" title="Óculos Inteligente" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="w-full h-full border-0"></iframe>
+                        </div>
+                    </div>
+                    <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-center leading-tight mb-6 max-w-4xl mx-auto">
+                        CANSADO DE <span class="text-warning">VISTA EMBAÇADA</span>, OLHOS ARDENDO E DOR DE CABEÇA?
+                    </h1>
+                    <div class="text-center max-w-2xl mx-auto mb-8">
+                        <p class="opacity-90 text-base md:text-lg">Se você usa celular, computador ou leitura todos os dias, o problema não é sua visão — é o <strong class="text-warning">esforço constante</strong> que seus óculos não acompanham.</p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8">
+                        <div class="relative w-full max-w-xs">
+                            <img src="assets/modelo_dourado-CkzY8VEs.jpg"
+                                alt="Modelo Dourado"
+                                class="w-full rounded-lg shadow-lg animate-float"
+                                style="animation-duration: 6.5s;"
+                                loading="lazy">
+                            <span class="block text-center font-semibold mt-2">
+                                Modelo Dourado
+                            </span>
+                        </div>
+                        <div class="relative w-full max-w-xs">
+                            <img src="assets/modelo_transparente-HF0w-5v-.jpg"
+                                alt="Modelo Transparente"
+                                class="w-full rounded-lg shadow-lg animate-float"
+                                style="animation-duration: 7.2s; animation-delay: 0.8s;"
+                                loading="lazy">
+                            <span class="block text-center font-semibold mt-2">
+                                Modelo Transparente
+                            </span>
+                        </div>
+                    </div>
+                    <p class="text-center text-[#ced8eb] text-sm md:text-base max-w-xl mx-auto mb-4">
+                        Conheça o <strong class="text-[#ffbf00]"><?= $appName ?></strong>, que se ajusta automaticamente à sua visão, sem exame, sem trocar de óculos, sem complicação.
+                    </p>
+                    <p class="text-center text-[#ced8eb] text-sm md:text-base max-w-xl mx-auto mb-8">Lentes polarizadas com filtro de luz azul, ideais para o uso prolongado de telas e ao ar livre. Simplesmente coloque e perceba conforto imediato e menos fadiga visual.</p>
+                    <div class="mb-6 flex justify-center">
+                        <div class="inline-flex
+              animate-pulse-soft
+              shadow-[0_0_35px_rgba(74,222,128,0.85)]
+              rounded-full">
+                            <a href="#oferta"
+                                class="btn-cta w-full sm:w-auto inline-block text-center">
+                                QUERO VOLTAR A ENXERGAR CONFORTÁVEL
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap justify-center items-center gap-4 md:gap-6 opacity-80 text-xs md:text-sm">
+                        <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="w-4 h-4 text-success" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6 9 17l-5-5"></path>
+                            </svg><span>Frete Grátis</span></div>
+                        <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="w-4 h-4 text-success" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6 9 17l-5-5"></path>
+                            </svg><span>Garantia Total</span></div>
+                        <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="w-4 h-4 text-success" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6 9 17l-5-5"></path>
+                            </svg><span>Pague na Entrega</span></div>
+                    </div>
+                </div>
+            </section>
+            <section class="bg-muted section-padding">
+                <div class="container mx-auto px-4 text-center max-w-2xl">
+                    <p class="text-xl md:text-2xl leading-relaxed text-foreground"><span class="font-bold text-[#ec1313]">Isso acontece aos poucos.</span></p>
+                    <p class="text-lg md:text-xl text-muted-foreground leading-relaxed mt-4">Ao longo do dia os olhos pesam, a visão embaça e a cabeça começa a doer.</p>
+                    <p class="text-lg md:text-xl text-foreground font-semibold leading-relaxed mt-4">Você se acostuma a forçar a visão sem perceber.</p>
+                </div>
+            </section>
+            <section class="bg-blue-gradient section-padding text-primary-foreground">
+                <div class="container mx-auto px-4 text-center max-w-3xl">
+                    <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#ec1313]/20 mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            class="w-8 h-8 text-[#ec1313]">
+                            <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"></path>
+                            <path d="M12 9v4"></path>
+                            <path d="M12 17h.01"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl lg:text-4xl font-black leading-tight mb-6">SEUS OLHOS NÃO ESTÃO <span class="text-warning">CANSADOS</span>.<br>ESTÃO SENDO <span class="text-warning">FORÇADOS</span>.</h2>
+                    <div class="opacity-90 text-base md:text-lg space-y-4">
+                        <p>Óculos comuns não acompanham as mudanças naturais da visão durante o dia.</p>
+                        <p>Você alterna entre celular, computador, leitura e distância, mas seu óculos continua o mesmo.</p>
+                        <p class="font-semibold text-white">O resultado é esforço excessivo, desconforto diário e dor no fim do dia.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="bg-muted section-padding">
+                <div class="container mx-auto px-4 max-w-2xl text-center">
+                    <div class="space-y-3 mb-8">
+                        <div class="flex items-center justify-center gap-3 text-lg md:text-xl text-muted-foreground">
+                            <span class="flex items-center justify-center w-8 h-8 rounded-full bg-[#ec1313]/20">
+                                <svg class="w-5 h-5 text-[#ec1313]" stroke="currentColor" fill="none" viewBox="0 0 24 24" stroke-width="2">
+                                    <path d="M18 6 6 18"></path>
+                                    <path d="m6 6 12 12"></path>
+                                </svg>
+                            </span>
+                            <span class="line-through">Isso não é idade.</span>
+                        </div>
+                        <div class="flex items-center justify-center gap-3 text-lg md:text-xl text-muted-foreground">
+                            <span class="flex items-center justify-center w-8 h-8 rounded-full bg-[#ec1313]/20">
+                                <svg class="w-5 h-5 text-[#ec1313]" stroke="currentColor" fill="none" viewBox="0 0 24 24" stroke-width="2">
+                                    <path d="M18 6 6 18"></path>
+                                    <path d="m6 6 12 12"></path>
+                                </svg>
+                            </span>
+                            <span class="line-through">Não é falta de cuidado.</span>
+                        </div>
+                    </div>
+                    <div class="bg-card rounded-2xl p-6 md:p-8 shadow-strong border-2 border-success/30">
+                        <div class="flex items-center justify-center gap-3 text-xl md:text-2xl font-bold text-foreground">
+                            <span class="flex items-center justify-center w-10 h-10 rounded-full bg-success/20">
+                                <svg class="w-6 h-6 text-success" stroke="currentColor" fill="none" viewBox="0 0 24 24" stroke-width="2">
+                                    <path d="M20 6 9 17l-5-5"></path>
+                                </svg>
+                            </span>
+                            <span>É apenas o <span class="text-primary">óculos errado</span> para a sua rotina.</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="bg-blue-gradient section-padding text-primary-foreground">
+                <div class="container mx-auto px-4">
+                    <h2 class="text-2xl md:text-3xl lg:text-4xl font-black text-center leading-tight mb-8">UM ÚNICO ÓCULOS PARA <span class="text-warning">TODAS AS SITUAÇÕES</span> DO SEU DIA</h2>
+                    <div class="text-center max-w-2xl mx-auto">
+                        <p class="opacity-90 text-base md:text-lg mb-6">O <?= $appName ?> ajusta automaticamente o foco para:</p>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                            <div class="flex items-center gap-3 bg-white/10 rounded-xl p-4">
+                                <div class="flex items-center justify-center w-10 h-10 rounded-full bg-warning/20"><svg class="w-5 h-5 text-warning" stroke="currentColor" fill="none" viewBox="0 0 24 24" stroke-width="2">
+                                        <path d="M12 7v14"></path>
+                                        <path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"></path>
+                                    </svg></div>
+                                <span class="font-semibold text-sm">Leitura</span>
+                            </div>
+                            <div class="flex items-center gap-3 bg-white/10 rounded-xl p-4">
+                                <div class="flex items-center justify-center w-10 h-10 rounded-full bg-warning/20"><svg class="w-5 h-5 text-warning" stroke="currentColor" fill="none" viewBox="0 0 24 24" stroke-width="2">
+                                        <rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect>
+                                        <path d="M12 18h.01"></path>
+                                    </svg></div>
+                                <span class="font-semibold text-sm">Celular</span>
+                            </div>
+                            <div class="flex items-center gap-3 bg-white/10 rounded-xl p-4">
+                                <div class="flex items-center justify-center w-10 h-10 rounded-full bg-warning/20"><svg class="w-5 h-5 text-warning" stroke="currentColor" fill="none" viewBox="0 0 24 24" stroke-width="2">
+                                        <rect width="20" height="14" x="2" y="3" rx="2"></rect>
+                                        <line x1="8" x2="16" y1="21" y2="21"></line>
+                                        <line x1="12" x2="12" y1="17" y2="21"></line>
+                                    </svg></div>
+                                <span class="font-semibold text-sm">Computador</span>
+                            </div>
+                            <div class="flex items-center gap-3 bg-white/10 rounded-xl p-4">
+                                <div class="flex items-center justify-center w-10 h-10 rounded-full bg-warning/20"><svg class="w-5 h-5 text-warning" stroke="currentColor" fill="none" viewBox="0 0 24 24" stroke-width="2">
+                                        <path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"></path>
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                    </svg></div>
+                                <span class="font-semibold text-sm">Distância</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap justify-center gap-4 font-semibold text-lg mb-6">
+                            <p>✓ Sem trocar de óculos.</p>
+                            <p>✓ Sem exame.</p>
+                            <p>✓ Sem esforço.</p>
+                        </div>
+                        <a href="#oferta"
+                            class="w-full sm:w-auto mb-8 inline-block text-center
+          bg-[#ec1313] hover:bg-[#c61010]
+          text-white font-bold
+          px-8 py-4 rounded-full
+          transition duration-300">
+                            QUERO O MEU AGORA
+                        </a>
+                        <img src="assets/modelos-oculos-Bb2_Znz1.jpg" alt="Modelos Disponíveis" class="w-full max-w-3xl mx-auto rounded-xl shadow-lg mt-8" loading="lazy">
+                    </div>
+                </div>
+            </section>
+            <section class="py-16 bg-gradient-to-b from-slate-900 to-slate-800">
+                <div class="container mx-auto px-4">
+                    <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-4">CONHEÇA NOSSOS <span class="text-yellow-400">MODELOS</span></h2>
+                    <p class="text-gray-300 text-center mb-12 max-w-2xl mx-auto">Veja em detalhes a qualidade e o design dos nossos óculos inteligentes adaptáveis</p>
+
+                    <div class="grid md:grid-cols-2 gap-8 mb-16 max-w-4xl mx-auto">
+                        <div class="flex flex-col items-center">
+                            <span class="inline-block bg-yellow-400 text-blue-900 text-sm font-bold px-4 py-2 rounded-full mb-4">MODELO DOURADO</span>
+                            <div class="relative w-full aspect-[9/16] max-w-[280px] rounded-2xl overflow-hidden shadow-2xl">
+                                <iframe src="https://www.youtube.com/embed/f_LTSMkxTTY?autoplay=0&loop=1&playlist=f_LTSMkxTTY&controls=1" title="Óculos Modelo Dourado" class="absolute inset-0 w-full h-full border-0" allowfullscreen loading="lazy"></iframe>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <span class="inline-block bg-blue-400 text-blue-900 text-sm font-bold px-4 py-2 rounded-full mb-4">MODELO TRANSPARENTE</span>
+                            <div class="relative w-full aspect-[9/16] max-w-[280px] rounded-2xl overflow-hidden shadow-2xl">
+                                <iframe src="https://www.youtube.com/embed/e7TjvvsRVs0?autoplay=0&loop=1&playlist=e7TjvvsRVs0&controls=1" title="Óculos Modelo Transparente" class="absolute inset-0 w-full h-full border-0" allowfullscreen loading="lazy"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-center text-white mb-8">GALERIA DE <span class="text-yellow-400">FOTOS</span></h3>
+                    <div class="max-w-5xl mx-auto px-4">
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            <div class="relative group overflow-hidden rounded-xl shadow-lg">
+                                <img src="assets/dourado_1-B5VijZtf.png" alt="Óculos Dourado" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" loading="lazy">
+                                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-3"><span class="text-yellow-400 text-sm font-semibold">Modelo Dourado</span></div>
+                            </div>
+                            <div class="relative group overflow-hidden rounded-xl shadow-lg">
+                                <img src="assets/transparente_1-CfoyzO4p.png" alt="Óculos Transparente" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" loading="lazy">
+                                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-3"><span class="text-blue-400 text-sm font-semibold">Modelo Transparente</span></div>
+                            </div>
+                            <div class="relative group overflow-hidden rounded-xl shadow-lg">
+                                <img src="assets/detalhe_1-nXtsI6Y-.jpg" alt="Detalhe Lentes" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" loading="lazy">
+                                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-3"><span class="text-white text-sm font-semibold">Detalhe das Lentes</span></div>
+                            </div>
+                            <div class="relative group overflow-hidden rounded-xl shadow-lg">
+                                <img src="assets/embalagem-QKH6jxxW.jpeg" alt="Embalagem" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" loading="lazy">
+                                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-3"><span class="text-white text-sm font-semibold">Embalagem Premium</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="bg-muted section-padding">
+                <div class="container mx-auto px-4">
+                    <h2 class="text-2xl md:text-3xl font-black text-foreground text-center mb-10">
+                        COMO FUNCIONA <span class="text-[#0d40a5]">NA PRÁTICA</span>
+                    </h2>
+                    <div class="max-w-3xl mx-auto">
+                        <div class="grid md:grid-cols-3 gap-6 relative">
+                            <div class="hidden md:block absolute top-8 left-[16.66%] right-[16.66%] h-1 
+bg-gradient-to-r from-[#0d40a5] via-[#ff5a5a] to-[#ff5a5a] z-0"></div>
+                            <div class="text-center relative z-10">
+                                <div class="inline-flex items-center justify-center w-16 h-16 rounded-full 
+                                bg-[#ec1313] text-white text-2xl font-bold shadow-lg mb-4">
+                                    1
+                                </div>
+                                <h3 class="text-lg font-bold">Coloque o óculos</h3>
+                            </div>
+                            <div class="text-center relative z-10">
+                                <div class="inline-flex items-center justify-center w-16 h-16 rounded-full 
+                                bg-[#ec1313] text-white text-2xl font-bold shadow-lg mb-4">
+                                    2
+                                </div>
+                                <h3 class="text-lg font-bold">Ajuste de forma simples e intuitiva</h3>
+                            </div>
+                            <div class="text-center relative z-10">
+                                <div class="inline-flex items-center justify-center w-16 h-16 rounded-full 
+                                bg-[#ec1313] text-white text-2xl font-bold shadow-lg mb-4">
+                                    3
+                                </div>
+                                <h3 class="text-lg font-bold">Enxergue com conforto imediato</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="bg-blue-gradient section-padding text-primary-foreground">
+                <div class="container mx-auto px-4">
+                    <h2 class="text-2xl md:text-3xl font-black text-center mb-10">O QUE VOCÊ VAI <span class="text-warning">SENTIR</span></h2>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-5 text-center border border-white/20">
+                            <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-warning/20 mb-3"><svg class="w-6 h-6 text-warning" stroke="currentColor" fill="none" viewBox="0 0 24 24" stroke-width="2">
+                                    <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path>
+                                </svg></div>
+                            <h3 class="text-sm md:text-base font-bold">Reduz dores de cabeça</h3>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-5 text-center border border-white/20">
+                            <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-warning/20 mb-3"><svg class="w-6 h-6 text-warning" stroke="currentColor" fill="none" viewBox="0 0 24 24" stroke-width="2">
+                                    <path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg></div>
+                            <h3 class="text-sm md:text-base font-bold">Menos esforço visual</h3>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-5 text-center border border-white/20">
+                            <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-warning/20 mb-3"><svg class="w-6 h-6 text-warning" stroke="currentColor" fill="none" viewBox="0 0 24 24" stroke-width="2">
+                                    <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                    <rect width="20" height="14" x="2" y="6" rx="2"></rect>
+                                </svg></div>
+                            <h3 class="text-sm md:text-base font-bold">Mais conforto no trabalho</h3>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-5 text-center border border-white/20">
+                            <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-warning/20 mb-3"><svg class="w-6 h-6 text-warning" stroke="currentColor" fill="none" viewBox="0 0 24 24" stroke-width="2">
+                                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                                </svg></div>
+                            <h3 class="text-sm md:text-base font-bold">Mais qualidade de vida</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="bg-muted section-padding pb-8">
+                <div class="container mx-auto px-4">
+                    <h2 class="text-2xl md:text-3xl font-black text-center mb-10">O QUE DIZEM <span class="text-primary">NOSSOS CLIENTES</span></h2>
+                    <div class="grid grid-cols-2 gap-4 max-w-3xl mx-auto mb-10">
+                        <div class="bg-card rounded-xl overflow-hidden shadow-medium">
+                            <div class="aspect-[9/14]">
+                                <iframe src="https://www.youtube.com/embed/7GZF8nb25A4" class="w-full h-full border-0" allowfullscreen loading="lazy"></iframe>
+                            </div>
+                        </div>
+                        <div class="bg-card rounded-xl overflow-hidden shadow-medium">
+                            <div class="aspect-[9/14]">
+                                <iframe src="https://www.youtube.com/embed/Rs5AdEm2df0" class="w-full h-full border-0" allowfullscreen loading="lazy"></iframe>
+                            </div>
+                        </div>
+                        <div class="bg-card rounded-xl overflow-hidden shadow-medium">
+                            <div class="aspect-video">
+                                <iframe src="https://www.youtube.com/embed/vhIlPp274Zc" class="w-full h-full border-0" allowfullscreen loading="lazy"></iframe>
+                            </div>
+                        </div>
+                        <div class="bg-card rounded-xl overflow-hidden shadow-medium">
+                            <div class="aspect-video">
+                                <iframe src="https://www.youtube.com/embed/Px_PE_gHhLQ" class="w-full h-full border-0" allowfullscreen loading="lazy"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="oferta" class="bg-[#ec1313] section-padding">
+                <div class="container mx-auto px-4">
+                    <h2 class="text-2xl md:text-3xl lg:text-4xl font-black text-center mb-4 text-[#fff]">
+                        VOCÊ SÓ PAGA QUANDO O PRODUTO CHEGAR NA SUA CASA
+                    </h2>
+                    <p class="text-center opacity-90 mb-4 text-[#fff]">
+                        Garanta seu Óculos Inteligente com condição especial
+                    </p>
+                    <div class="bg-white border-4 border-[#ec1313] rounded-xl p-5 max-w-2xl mx-auto mb-6 animate-shadow-pulse shadow-lg">
+                        <p class="text-center text-[#ec1313] font-black text-base md:text-lg flex items-center justify-center gap-2">
+                            <span class="animate-bounce">🚨</span>
+                            ATENÇÃO: FAÇA O PEDIDO SOMENTE SE TIVER CERTEZA DA COMPRA!
+                        </p>
+                        <p class="text-center text-gray-800 font-black text-sm md:text-base mt-3 uppercase">
+                            EM CASO DE DESISTÊNCIA NO MOMENTO DA ENTREGA, SERÁ COBRADA A TAXA DE DESLOCAMENTO DO ENTREGADOR.
+                        </p>
+                    </div>
+                    <p class="text-center text-gray-800 font-medium text-sm md:text-base mb-10 bg-white py-4 px-6 rounded-lg max-w-xl mx-auto border-2 border-[#ec1313] shadow">
+                        ⚠️ NO MOMENTO DA COMPRA,
+                        <span class="font-bold">INFORME NA DESCRIÇÃO O MODELO DESEJADO</span>
+                        (DOURADO OU TRANSPARENTE)
+                    </p>
+                    <?php
+                    $produtos = [
+                        [
+                            'titulo'      => '1 Unidade',
+                            'img'         => 'assets/1_unidade-BgpV9wPI.webp',
+                            'imgAlt'      => '1 Óculos',
+                            'imgClass'    => 'w-40',
+                            'precoAntigo' => $precoAntigo1,
+                            'precoNovo'   => $precoNovo1,
+                            'precoCentavo' => $precoCentavo1,
+                            'link'        => $linkAfiliado1,
+                            'destaque'    => false,
+                            'btnClass'    => 'py-3',
+                        ],
+                        [
+                            'titulo'      => '2 Unidades',
+                            'img'         => 'assets/2_unidades-BgcDbfhc.webp',
+                            'imgAlt'      => '2 Óculos',
+                            'imgClass'    => 'w-48',
+                            'precoAntigo' => $precoAntigo2,
+                            'precoNovo'   => $precoNovo2,
+                            'precoCentavo' => $precoCentavo2,
+                            'link'        => $linkAfiliado2,
+                            'destaque'    => true,
+                            'btnClass'    => 'py-4 animate-pulse-soft',
+                        ],
+                        [
+                            'titulo'      => '3 Unidades',
+                            'img'         => 'assets/3_unidades-DcI2OdRq.webp',
+                            'imgAlt'      => '3 Óculos',
+                            'imgClass'    => 'w-48',
+                            'precoAntigo' => $precoAntigo3,
+                            'precoNovo'   => $precoNovo3,
+                            'precoCentavo' => $precoCentavo3,
+                            'link'        => $linkAfiliado3,
+                            'destaque'    => false,
+                            'btnClass'    => 'py-3',
+                        ],
+                    ];
+                    ?>
+                    <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-10 items-start">
+                        <?php foreach ($produtos as $p): ?>
+                            <div class="bg-white rounded-2xl p-6 text-center shadow-strong <?= $p['destaque'] ? 'border-[4px] border-[#ffbf00] rounded-[4px] relative md:-translate-y-4 shadow-[0_0_20px_rgba(251,146,60,0.5)]' : 'border border-gray-200' ?>">
+                                <?php if ($p['destaque']): ?>
+                                    <div class="absolute text-[#000] -top-3 left-1/2 -translate-x-1/2 bg-[#ffbf00] text-white text-xs font-bold px-4 py-1 rounded-full">
+                                        MAIS VENDIDO
+                                    </div>
+                                <?php endif; ?>
+                                <h3 class="text-xl font-bold mb-4"><?= $p['titulo'] ?></h3>
+                                <img src="<?= $p['img'] ?>" alt="<?= $p['imgAlt'] ?>" class="<?= $p['imgClass'] ?> mx-auto mb-4 rounded-lg" loading="lazy">
+                                <p class="text-gray-500 line-through text-sm mb-1">De R$ <?= $p['precoAntigo'] ?></p>
+                                <p class="<?= $p['destaque'] ? 'text-4xl' : 'text-3xl' ?> font-black text-[#ec1313] mb-4">
+                                    R$ <?= $p['precoNovo'] ?><span class="text-xl"><?= $p['precoCentavo'] ?></span>
+                                </p>
+                                <a href="<?= $p['link'] ?>" target="_blank"
+                                    class="w-full block bg-[#ec1313] hover:bg-[#c61010] text-white font-bold <?= $p['btnClass'] ?> rounded-full transition <?= $p['destaque'] ? 'shadow-[0_4px_20px_rgba(250,204,21,0.7)]' : '' ?>">
+                                    AGENDAR PEDIDO
+                                </a>
+                                <p class="text-xs text-gray-500 mt-2 mb-3">Pague somente na entrega! Pix ou Cartão! Frete grátis</p>
+                                <div class="border border-[#ec1313] rounded-lg px-3 py-2 mb-4 text-left">
+                                    <p class="text-xs text-[#ec1313] flex gap-1">
+                                        <span>⚠️</span>
+                                        <span>Faça o pedido somente se tiver certeza. Em caso de desistência na entrega, será cobrada a taxa de deslocamento do entregador.</span>
+                                    </p>
+                                </div>
+                                <div class="text-left">
+                                    <p class="text-sm font-bold text-center mb-3">❄️ Itens Extras</p>
+                                    <div class="flex flex-col gap-2">
+                                        <div class="bg-orange-50 rounded-lg px-3 py-2 flex items-center gap-3">
+                                            <img src="assets/limpalentes.png" alt="Limpa Lentes" class="w-8 h-8 object-contain shrink-0" loading="lazy">
+                                            <div>
+                                                <p class="text-xs font-bold text-gray-800">Limpa Lentes <span class="font-normal text-gray-600">- Spray para limpeza profissional das lentes</span></p>
+                                                <p class="text-xs font-bold text-gray-700">R$ 15,00</p>
+                                            </div>
+                                        </div>
+                                        <div class="bg-orange-50 rounded-lg px-3 py-2 flex items-center gap-3">
+                                            <img src="assets/image-removebg-preview (20).png" alt="Cordão" class="w-8 h-8 object-contain shrink-0" loading="lazy">
+                                            <div>
+                                                <p class="text-xs font-bold text-gray-800">Cordão Salva Óculos <span class="font-normal text-gray-600">- Nunca mais perca ou deixe cair seu óculos</span></p>
+                                                <p class="text-xs font-bold text-gray-700">R$ 5,90</p>
+                                            </div>
+                                        </div>
+                                        <div class="bg-orange-50 rounded-lg px-3 py-2 flex items-center gap-3">
+                                            <img src="assets/image-removebg-preview (21).png" alt="Vision Gota" class="w-8 h-8 object-contain shrink-0" loading="lazy">
+                                            <div>
+                                                <p class="text-xs font-bold text-gray-800">Vision Gota <span class="font-normal text-gray-600">- Suplemento líquido para saúde ocular</span></p>
+                                                <p class="text-xs font-bold text-gray-700">R$ 89,90</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="text-xs text-orange-600 text-center mt-3">
+                                        Adicione no momento da compra os itens extras desejados
+                                    </p>
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                    <div class="flex flex-wrap justify-center gap-6 md:gap-10 font-semibold text-white bg-[#ec1313] py-4 px-6 rounded-xl">
+                        <div class="flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" />
+                                <path d="M15 18H9" />
+                                <path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14" />
+                                <circle cx="17" cy="18" r="2" />
+                                <circle cx="7" cy="18" r="2" />
+                            </svg>
+                            Frete grátis
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <rect width="20" height="14" x="2" y="5" rx="2" />
+                                <line x1="2" x2="22" y1="10" y2="10" />
+                            </svg>
+                            Pagamento na entrega
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+                            </svg>
+                            Garantia total
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z" />
+                            </svg>
+                            Entrega rápida
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div style="
+  background:#fff;
+  border:2.5px solid #bde7cf;
+  border-radius:20px;
+  padding:36px 40px 32px;
+  max-width:650px;
+  width:100%;
+  margin: 80px auto; /* ← espaço em cima e embaixo */
+  text-align:center;
+  box-shadow:0 8px 30px rgba(0,0,0,0.06); 
+">
+
+                <div style="
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:14px;
+    margin-bottom:22px;
+  ">
+
+                    <div style="
+      width:64px;
+      height:64px;
+      background:#22c55e;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow:0 6px 18px rgba(34,197,94,0.35);
+      position:relative;
+    ">
+                        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 6 9 17l-5-5" />
+                        </svg>
+                        <div style="
+        width:22px;
+        height:22px;
+        background:#16a34a;
+        border-radius:50%;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        position:absolute;
+        bottom:-3px;
+        right:-3px;
+        border:2px solid #fff;
+      ">
+                            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5">
+                                <path d="M20 6 9 17l-5-5" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div style="
+      background:#fff;
+      border:1.5px solid #d6f5e3;
+      border-radius:999px;
+      padding:6px 14px;
+      display:flex;
+      align-items:center;
+      gap:6px;
+      font-size:12.5px;
+      font-weight:800;
+      color:#16a34a;
+      box-shadow:0 4px 14px rgba(0,0,0,0.08);
+      letter-spacing:0.05em;
+    ">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5">
+                            <path d="M20 6 9 17l-5-5" />
+                        </svg>
+                        VERIFICADO
+                    </div>
+
+                </div>
+                <h2 style="
+    font-size:22px;
+    font-weight:900;
+    color:#111;
+    margin-bottom:14px;
+    letter-spacing:0.01em;
+  ">
+                    PRODUTO 100% ORIGINAL
+                </h2>
+                <p style="
+    font-size:15px;
+    color:#555;
+    line-height:1.6;
+    margin-bottom:26px;
+    max-width:380px;
+    margin-left:auto;
+    margin-right:auto;
+  ">
+                    Nossos óculos são <strong style="color:#111;">certificados e autênticos</strong>,
+                    com materiais de alta qualidade e tecnologia comprovada.
+                </p>
+                <div style="
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:18px;
+    flex-wrap:wrap;
+  ">
+                    <div style="display:flex; align-items:center; gap:6px; font-size:13px; color:#444;">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="8" r="5" />
+                            <path d="M9.5 13.5 7 21l5-3 5 3-2.5-7.5" />
+                            <path d="m10 8 1.2 1.2L14 6.5" />
+                        </svg>
+                        Certificado de Autenticidade
+                    </div>
+                    <div style="display:flex; align-items:center; gap:6px; font-size:13px; color:#444;">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg>
+                        Lentes Polarizadas Originais
+                    </div>
+                    <div style="display:flex; align-items:center; gap:6px; font-size:13px; color:#444;">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2">
+                            <path d="M20 6 9 17l-5-5" />
+                        </svg>
+                        Qualidade Premium
+                    </div>
+                </div>
+            </div>
+            <section class="bg-blue-gradient section-padding">
+                <div class="container mx-auto px-4 max-w-2xl">
+                    <h2 class="text-2xl md:text-3xl font-black text-center mb-10 text-white">DÚVIDAS <span class="text-warning">FREQUENTES</span></h2>
+                    <div class="flex flex-col gap-3">
+                        <?php
+                        $faqs = [
+                            [
+                                "q" => "Funciona para quem trabalha no computador ou celular?",
+                                "a" => "Sim! O Óculos foi desenvolvido especialmente para quem passa horas na frente de telas. O ajuste automático reduz significativamente a fadiga ocular."
+                            ],
+                            [
+                                "q" => "Serve para leitura e distância?",
+                                "a" => "Sim! Com o ajuste intuito, você pode configurar o foco perfeito tanto para leitura de perto quanto para enxergar à distância."
+                            ],
+                            [
+                                "q" => "Precisa de receita médica?",
+                                "a" => "Não! O óculos inteligente Adaptável foi projetado para ser ajustado por você mesmo, de forma intuitiva, sem necessidade de consulta ou receita."
+                            ],
+                            [
+                                "q" => "Posso pagar quando receber?",
+                                "a" => "Sim! Oferecemos pagamento na entrega. Você só paga quando o produto chegar em suas mãos, com total segurança."
+                            ],
+                            [
+                                "q" => "O frete é grátis para todo Brasil?",
+                                "a" => "Sim! Oferecemos frete grátis para todo o território nacional, O prazo de entrega é de 24 horas."
+                            ],
+                        ];
+                        ?>
+
+                        <?php foreach ($faqs as $i => $faq): ?>
+                            <div class="faq-item rounded-xl overflow-hidden border border-white/20" style="background: rgba(255,255,255,0.08);">
+                                <button
+                                    onclick="toggleFaq(<?= $i ?>)"
+                                    class="w-full flex items-center justify-between px-5 py-4 text-left text-white font-semibold text-sm md:text-base gap-4">
+                                    <span><?= $faq['q'] ?></span>
+                                    <svg id="icon-<?= $i ?>" class="w-5 h-5 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                        <path d="M6 9l6 6 6-6" />
+                                    </svg>
+                                </button>
+                                <div id="faq-<?= $i ?>" class="hidden px-5 pb-4 text-white/80 text-sm md:text-base leading-relaxed">
+                                    <?= $faq['a'] ?>
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
+
+                    </div>
+                </div>
+            </section>
+            <script>
+                function toggleFaq(i) {
+                    const content = document.getElementById('faq-' + i);
+                    const icon = document.getElementById('icon-' + i);
+                    const isOpen = !content.classList.contains('hidden');
+                    document.querySelectorAll('[id^="faq-"]').forEach(el => el.classList.add('hidden'));
+                    document.querySelectorAll('[id^="icon-"]').forEach(el => el.style.transform = '');
+                    if (!isOpen) {
+                        content.classList.remove('hidden');
+                        icon.style.transform = 'rotate(180deg)';
+                    }
+                }
+            </script>
+            <section class="bg-muted section-padding">
+                <div class="container mx-auto px-4 max-w-2xl text-center">
+                    <h2 class="text-2xl md:text-3xl font-black leading-tight mb-6">COLOQUE, AJUSTE E SINTA O <span class="text-primary">ALÍVIO NOS PRIMEIROS MINUTOS</span>.</h2>
+                    <p class="text-lg text-muted-foreground mb-2">Ignorar o desconforto só piora com o tempo.</p>
+                    <p class="text-lg font-semibold mb-8">Resolver agora é mais simples do que parece.</p>
+                    <a href="#oferta" class="btn-cta animate-pulse-soft w-full sm:w-auto mb-6 inline-block">COMPRAR AGORA</a>
+                    <div class="flex items-center justify-center gap-6 flex-wrap text-sm text-muted-foreground">
+                        <span class="flex items-center gap-1">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                <path d="M20 6 9 17l-5-5" />
+                            </svg>
+                            Frete Grátis
+                        </span>
+                        <span class="flex items-center gap-1">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                <path d="M20 6 9 17l-5-5" />
+                            </svg>
+                            Garantia Total
+                        </span>
+                        <span class="flex items-center gap-1">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                <path d="M20 6 9 17l-5-5" />
+                            </svg>
+                            Pague na Entrega
+                        </span>
+                    </div>
+                </div>
+            </section>
+            <footer class="bg-[#062d79] py-8 text-white text-center">
+                <div class="container mx-auto px-4">
+                    <p class="opacity-80 text-sm mb-2">
+                        &copy; <?= date('Y') ?> <?= $appName ?>. Todos os direitos reservados.
+                    </p>
+                    <p class="opacity-60 text-xs">
+                        Este produto não substitui acompanhamento médico oftalmológico quando necessário.
+                    </p>
+                </div>
+            </footer>
+        </main>
+    </div>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
